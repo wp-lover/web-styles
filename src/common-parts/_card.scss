@@ -1,0 +1,42 @@
+@use '../variables' as *;
+
+.-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+
+    // nb means "No Border"   
+  .-card-nb {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  
+  .-card-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+  
+  .-card-body {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .-card-footer {
+    padding-top: 12px;
+    border-top: 1px solid #ddd;
+    margin-top: 12px;
+    text-align: right;
+  }
+  

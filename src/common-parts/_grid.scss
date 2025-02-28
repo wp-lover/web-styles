@@ -1,0 +1,48 @@
+@use '../variables' as *;
+
+// set the post grid
+.#{$prefix}grid-col-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+
+    .#{$prefix}col{
+      width: auto;
+    }
+  }
+
+  
+  @media (max-width: 480px) {
+    .#{$prefix}grid-col-3 {
+      display: grid;
+      grid-template-columns: 1fr;
+  
+      // set the post-card width
+      .#{$prefix}col {
+        max-width: 300px;
+        margin: 10px auto;
+      }
+    }
+  }
+  @media (min-width: 500px) and (max-width: 768px) {
+    .#{$prefix}grid-col-3 {
+      column-gap: 30px;
+    }
+  }
+
+  
+  @media (min-width: 500px) and (max-width: 992px) {
+    .#{$prefix}grid-col-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 30px;
+    }
+  }
+  
+
+  
+  @media (min-width: 768px) and (min-width: 992px) {
+    .#{$prefix}grid-col-3 {
+      column-gap: 40px;
+    }
+  }

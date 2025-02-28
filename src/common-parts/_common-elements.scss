@@ -1,0 +1,12 @@
+@use '../variables' as *;
+
+// Example usage:
+.#{$prefix}btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.#{$prefix}card {
+  border-radius: 10px;
+}

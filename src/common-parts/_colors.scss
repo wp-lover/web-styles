@@ -1,0 +1,19 @@
+@use '../variables' as *;
+
+//background color
+
+.#{$prefix}bg-1_c{
+    background-color: bisque;
+}
+.#{$prefix}bg-2_c{
+    background-color: red;
+}
+
+// text color
+.#{$prefix}text-1_c{
+    color: red;
+}
+.#{$prefix}text-2_c{
+    color: bisque;
+}
+

@@ -1,0 +1,35 @@
+@use '../variables' as *;
+
+// _container.scss
+$container-max-widths: (
+  xs: 100%,      
+  sm: 540px,     
+  md: 720px,     
+  lg: 992px,     
+  xl: 1140px,    
+  xxl: 1320px    
+);
+
+.#{$prefix}container {
+  box-sizing: border-box;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 5%;
+  padding-left: 5%;
+  
+  @each $breakpoint, $max-width in $container-max-widths {
+    @media (min-width: #{map-get($container-max-widths, $breakpoint)}) {
+      max-width: $max-width;
+    }
+  }
+}
+
+.#{$prefix}container-fluid {
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
