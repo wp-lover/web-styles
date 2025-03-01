@@ -1,48 +1,47 @@
-@use '../variables' as *;
+@use "../variables" as *;
 
 // set the post grid
-.#{$prefix}grid-col-3 {
+.-grid-col-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  align-items: stretch;
+}
+
+
+@media (max-width: 480px) {
+  .-grid-col-3 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 20px;
+    grid-template-columns: 1fr;
+  }
+}
 
-    .#{$prefix}col{
-      width: auto;
-    }
+@media (min-width: 500px) and (max-width: 992px) {
+  .-grid-col-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
   }
+}
 
-  
-  @media (max-width: 480px) {
-    .#{$prefix}grid-col-3 {
-      display: grid;
-      grid-template-columns: 1fr;
-  
-      // set the post-card width
-      .#{$prefix}col {
-        max-width: 300px;
-        margin: 10px auto;
-      }
-    }
+@media (min-width: 500px) and (max-width: 768px) {
+  .-grid-col-3 {
+    column-gap: 30px;
   }
-  @media (min-width: 500px) and (max-width: 768px) {
-    .#{$prefix}grid-col-3 {
-      column-gap: 30px;
-    }
-  }
+}
 
-  
-  @media (min-width: 500px) and (max-width: 992px) {
-    .#{$prefix}grid-col-3 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 30px;
-    }
+@media (min-width: 768px) and (min-width: 992px) {
+  .-grid-col-3 {
+    column-gap: 40px;
   }
-  
+}
 
-  
-  @media (min-width: 768px) and (min-width: 992px) {
-    .#{$prefix}grid-col-3 {
-      column-gap: 40px;
-    }
-  }
+
+.-d-flex {
+  display: flex;
+}
+.-flex-between{justify-content: space-between;}
+.-flex-around{justify-content: space-around;}
+.-flex-evenly{justify-content: space-evenly;}
+.-d-none{display: none;}
+.-d-block{display: block;}
